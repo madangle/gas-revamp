@@ -1,26 +1,32 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { AppRoutingModule } from './app-routing.module';
+
+/*** IMPORTING MODULES ***/
+import { CoreModule } from './core/core.module';
+import { SharedModule } from './shared/shared.module';
+import { LayoutModule } from './layout/layout.module';
+
 import { AppComponent } from './app.component';
-import { MainLayoutComponent } from './layout/main-layout/main-layout.component';
-import { HeaderComponent } from './layout/header/header.component';
-import { FooterComponent } from './layout/footer/footer.component';
-import { SidebarComponent } from './layout/sidebar/sidebar.component';
-import { MainNavigationComponent } from './layout/header/main-navigation/main-navigation.component';
+
+
 
 @NgModule({
   declarations: [
-    AppComponent,
-    MainLayoutComponent,
-    HeaderComponent,
-    FooterComponent,
-    SidebarComponent,
-    MainNavigationComponent
+    AppComponent
   ],
   imports: [
+    // Angular
     BrowserModule,
-    AppRoutingModule
+    // app
+    AppRoutingModule,
+    // core, shared & layout
+    CoreModule,
+    SharedModule,
+    LayoutModule,
+
+    BrowserAnimationsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

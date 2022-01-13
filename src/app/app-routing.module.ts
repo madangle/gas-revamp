@@ -22,7 +22,7 @@ const routes: Routes = [
         loadChildren: () => import('./features/e-services/e-services.module').then(m => m.EServicesModule) 
       },
       {
-        path: 'contact',
+        path: 'media',
         loadChildren: () => import('./features/media/media.module').then(m => m.MediaModule)
       }
     ]
