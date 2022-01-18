@@ -29,30 +29,6 @@ const routes: Routes = [
   }
 ];
 
-// const routes: Routes = [
-//   { 
-//     path: 'home', 
-//     component: MainLayoutComponent,
-//     loadChildren: () => import('./features/home/home.module').then(m => m.HomeModule) 
-//   },
-//   { 
-//     path: 'e-services', 
-//     component: MainLayoutComponent,
-//     loadChildren: () => import('./features/e-services/e-services.module').then(m => m.EServicesModule) 
-//   },
-//   { 
-//     path: 'media', 
-//     component: MainLayoutComponent,
-//     loadChildren: () => import('./features/media/media.module').then(m => m.MediaModule) 
-//   },
-//   {
-//     path: '',
-//     component: MainLayoutComponent,
-//     redirectTo: '',
-//     pathMatch: 'full'
-//   }
-// ];
-
 @NgModule({
   imports: [RouterModule.forRoot(routes)],
   exports: [RouterModule]

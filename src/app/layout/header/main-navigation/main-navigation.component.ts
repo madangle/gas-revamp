@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { TranslateService } from '@ngx-translate/core';
 
 @Component({
   selector: 'gas-main-navigation',
@@ -7,9 +8,15 @@ import { Component, OnInit } from '@angular/core';
 })
 export class MainNavigationComponent implements OnInit {
 
-  constructor() { }
+  constructor(public translate: TranslateService) { 
+    
+  }
 
   ngOnInit(): void {
   }
 
+  useLanguage(language: string): void {
+    console.log(language)
+    this.translate.use(language);
+  }
 }

@@ -2,7 +2,7 @@ import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { LogoComponent } from './components/logo/logo.component';
 
-
+import { TranslateModule } from '@ngx-translate/core';
 
 @NgModule({
   declarations: [
@@ -10,6 +10,9 @@ import { LogoComponent } from './components/logo/logo.component';
   ],
   imports: [
     CommonModule
+  ],
+  exports: [
+    TranslateModule
   ]
 })
 export class SharedModule { }

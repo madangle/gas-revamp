@@ -1,6 +1,10 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
+//shared module
+import { SharedModule } from '../shared/shared.module';
+
 import { LayoutRoutingModule } from './layout-routing.moduel'; 
+
 /*** COMPONENTS ***/
 import { MainLayoutComponent } from './main-layout/main-layout.component';
 import { HeaderComponent } from './header/header.component';
@@ -18,7 +22,8 @@ import { MainNavigationComponent } from './header/main-navigation/main-navigatio
   ],
   imports: [
     CommonModule,
-    LayoutRoutingModule
+    LayoutRoutingModule,
+    SharedModule
   ]
 })
 export class LayoutModule { }
