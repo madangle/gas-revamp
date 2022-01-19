@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 
 @Component({
-  selector: 'app-media',
+  selector: 'gas-media',
   templateUrl: './media.component.html',
   styleUrls: ['./media.component.scss']
 })
