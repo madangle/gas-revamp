@@ -24,6 +24,10 @@ const routes: Routes = [
       {
         path: 'media',
         loadChildren: () => import('./features/media/media.module').then(m => m.MediaModule)
+      },
+      {
+        path:'account',
+        loadChildren:() => import('./features/authentication/authentication.module').then(m => m.AuthenticationModule)
       }
     ]
   }

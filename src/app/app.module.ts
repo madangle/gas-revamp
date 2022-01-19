@@ -2,8 +2,9 @@ import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { AppRoutingModule } from './app-routing.module';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
-/*** TRANSLATION and HTTTP modules ***/
+/*** TRANSLATION and HTTP modules ***/
 import { TranslateLoader, TranslateModule } from '@ngx-translate/core';
 import { TranslateHttpLoader } from '@ngx-translate/http-loader';
 import { HttpClient, HttpClientModule } from '@angular/common/http';
@@ -23,6 +24,8 @@ import { AppComponent } from './app.component';
   imports: [
     // Angular
     BrowserModule,
+    FormsModule,
+    ReactiveFormsModule,
     // app
     AppRoutingModule,
     //translate modules

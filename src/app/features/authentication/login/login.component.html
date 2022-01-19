@@ -1,0 +1,27 @@
+<!-- <form [formGroup]="loginForm" (ngSubmit)="onSubmitLogin()">
+    <div class="mb-3">
+      <label for="email" class="form-label">Email address</label>
+      <input type="email" class="form-control" id="email" [formControlName]="email"> -->
+<!-- <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div> -->
+<!-- </div>
+    <div class="mb-3">
+      <label for="password" class="form-label">Password</label>
+      <input type="password" class="form-control" id="password" [formControlName]="password">
+    </div>
+    <button type="submit" class="btn btn-primary" [disabled]="!loginForm.valid">Submit</button>
+  </form> -->
+
+<form [formGroup]="loginForm" (ngSubmit)="onSubmitLogin()">
+  <div class="mb-3 form-group">
+    <label for="email" class="form-label">Email address: </label>
+    <input id="email" class="form-control" type="email" formControlName="email">
+    <span class="text-danger" *ngIf="email()?.touched && (email()?.errors?.['required'] || email()?.errors?.['email']) ">Required</span>
+  </div>
+  
+  <div class="mb-3 form-group">
+    <label for="password" class="form-label">Password: </label>
+    <input id="password" type="password" class="form-control" formControlName="password">
+    <span class="text-danger" *ngIf="password()?.touched && password()?.errors?.['required']">Required</span>
+  </div>
+  <button type="submit" class="btn btn-primary" [disabled]="!loginForm.valid">Submit</button>
+</form>

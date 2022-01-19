@@ -1,0 +1,65 @@
+<form [formGroup]="registrationForm" (ngSubmit)="onRegistrationSubmit()">
+    <div class="form-group row">
+        <label for="email" class="col-md-3 col-5">Email <span class="text-danger">*</span></label>
+        <div class=" col-md-9 col-7">
+            <input type="text" id="email" class="form-control" formControlName="email" name="email" placeholder="Email">
+        </div>
+    </div>
+    <div class="form-group row">
+        <label for="password" class="col-md-3 col-5">Password <span class="text-danger">*</span></label>
+        <div class="col-md-9 col-7">
+            <input type="password" id="password" class="form-control" formControlName="password" name="password" placeholder="Password"> 
+        </div>
+    </div>
+    <div class="form-group row">
+        <label for="rePassword" class="col-md-3 col-5">Re-enter Password <span class="text-danger">*</span></label>
+        <div class="col-md-9 col-7">
+            <input type="password" id="rePassword" class="form-control" formControlName="rePassword" name="rePassword" placeholder="Re-enter Password"> 
+        </div>
+    </div>
+    <div class="form-group row">
+        <label for="nameArabic" class="col-md-3 col-5">Name (Arabic)</label>
+        <div class="col-md-9 col-7 nameWidth">
+            <div class="d-flex justify-content-between">
+                <input type="text" id="nameArabicFname" class="form-control d-inline" formControlName="nameArabicFname" name="nameEnglish" placeholder="First Name"> 
+                <input type="text" id="nameArabicMname" class="form-control d-inline" formControlName="nameArabicMname" name="nameEnglish" placeholder="Middle Name"> 
+                <input type="text" id="nameArabicLname" class="form-control d-inline" formControlName="nameArabicLname" name="nameEnglish" placeholder="Last Name"> 
+            </div>
+        </div>
+    </div>
+    <div class="form-group row">
+        <label for="nameEnglish" class="col-md-3 col-5">Name (English) <span class="text-danger">*</span> </label>
+        <div class="col-md-9 col-7 nameWidth">
+            <div class="d-flex justify-content-between">
+                <input type="text" id="nameEnglishFname" class="form-control d-inline" formControlName="nameEnglishFname" name="nameEnglish" placeholder="First Name"> 
+                <input type="text" id="nameEnglishMname" class="form-control d-inline" formControlName="nameEnglishMname" name="nameEnglish"  placeholder="Middle Name"> 
+                <input type="text" id="nameEnglishLname" class="form-control d-inline" formControlName="nameEnglishLname" name="nameEnglish" placeholder="Last Name"> 
+            </div>
+        </div>
+    </div>
+    <div class="form-group row">
+        <label for="mobile" class="col-md-3 col-5">Mobile No <span class="text-danger">*</span></label>
+        <div class="col-md-9 col-7">
+            <input type="text" id="mobile" class="form-control" formControlName="mobile" name="mobile"> 
+        </div>
+    </div>
+    <div class="form-group row">
+        <label for="telephone" class="col-md-3 col-5">Telephone No</label>
+        <div class="col-md-9 col-7">
+            <input type="text" id="telephone" class="form-control" formControlName="telephone" name="telephone"> 
+        </div>
+    </div>
+    <div class="form-group row">
+        <label for="fax" class="col-md-3 col-5">Fax No</label>
+        <div class="col-md-9 col-7">
+            <input type="text" id="fax" class="form-control" formControlName="fax" name="fax"> 
+        </div>
+    </div>
+    <div class="form-group row">
+        <label for="postBox" class="col-md-3 col-5">Post Box</label>
+        <div class="col-md-9 col-7">
+            <input type="text" id="postBox" class="form-control" formControlName="postBox" name="postBox"> 
+        </div>
+    </div>
+    <button type="submit" class="btn btn-primary" [disabled]="!registrationForm.valid">Save</button>
+</form>
